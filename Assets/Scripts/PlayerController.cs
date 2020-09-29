@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void Onmove(InputValue movementValue)
+    private void OnMove(InputValue movementValue)
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
 
@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
+        Debug.Log(movement);
         rb.AddForce(movement * speed);
     }
 
